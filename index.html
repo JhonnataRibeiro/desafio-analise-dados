@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <title>Análise de Dados</title>
+</head>
+<body>
+  <header class="cabecalho">
+    <div class="container-title-cabecalho">
+      <h1>Análise de<br>Dados Incode</h1>
+    </div>
+
+    <div class="container-filtro-and-perfil">
+      <div class="container-filtro-cabecalho">
+        <p>Filtro</p>
+        <img src="./icons/icon-filtro-padrao.png" alt="">
+      </div>
+  
+      <div class="container-perfil-cabecalho">
+        <p>Visitante</p>
+        <img src="./img/perfil-padrao.png" alt="Foto de usuário padrão sem foto">
+        <img id="icon-login" src="./icons/icon-login-padrao.png" alt="">
+      </div>
+    </div>
+  </header>
+
+  <div class="container-content-principal">
+    <nav class="navegacao-grafico">
+      <div id="div-focus" class="nav-geral">
+        <img src="./icons/icon-geral-focus.png" alt="">
+        <p id="p-focus">Visão Geral</p>
+      </div>
+
+      <div class="nav-geral">
+        <img src="./icons/icon-tarefas-padrao.png" alt="">
+        <p>Tarefas por Líder de Equipe</p>
+      </div>
+
+      <div class="nav-geral">
+        <img src="./icons/icon-atividades-padrao.png" alt="">
+        <p>Atividades por Responsável</p>
+      </div>
+
+      <div class="nav-geral">
+        <img src="./icons/icon-sistema-padrao.png" alt="">
+        <p>Atividades por Sistema</p>
+      </div>
+
+      <div class="nav-geral">
+        <img src="./icons/icon-supervisor-padrao.png" alt="">
+        <p>Atividades por Supervisor</p>
+      </div>
+    </nav>
+  
+    <main class="graficos-dados">
+      <section class="numeros-absolutos">
+        <div class="container-numeros-absolutos">
+          <h2>Números absolutos</h2>
+          <div class="container-box-valores ">
+            <div class="box-valores box-valores1" name="box-tarefa">
+              <h3>0</h3>
+              <p>Tarefas</p>
+            </div>
+  
+            <div class="box-valores box-valores2" name="box-atividade">
+              <h3>0</h3>
+              <p>Atividades</p>
+            </div>
+  
+            <div class="box-valores box-valores3" name="box-lider">
+              <h3>0</h3>
+              <p>Líderes</p>
+            </div>
+  
+            <div class="box-valores box-valores4" name="box-sistema">
+              <h3>0</h3>
+              <p>Sistemas</p>
+            </div>
+  
+            <div class="box-valores box-valores5" name="box-supervisor">
+              <h3>0</h3>
+              <p>Supervisores</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="flex-section-grafico">
+        <section class="grafico tarefas-lider">
+          <div class="board">
+            <div class="titulo-grafico">
+              <img src="./icons/icon-grafico-analitico-focus1.png" alt="">
+              <h3 class="t-grafico">Tarefas por Líder de Equipe</h3>
+            </div>
+            
+            <div class="sub-board">
+              <div class="sep-board"></div>
+              
+              <div class="cont-board">
+
+                <div class="graf-board grafico-tarefa-lider">
+                  <!-- <div class="barra">
+                    <div class="sub-barra barra1">
+                      <div class="legenda-balao">100</div>
+                      <div class="tag-g teste-balao"></div>
+
+                      <div class="tag-legenda">Nome 1</div>
+                    </div>
+                  </div> -->
+                </div>
+                <div class="tag-board">
+                  <div class="sub-tag-board escala-tarefa-lider">
+                    <div class="escala-lateral6"></div>
+                    <div class="escala-lateral5"></div>
+                    <div class="escala-lateral4"></div>
+                    <div class="escala-lateral3"></div>
+                    <div class="escala-lateral2"></div>
+                    <div class="escala-lateral1"></div>
+                  </div>
+                </div>
+              </div>
+            </div>    
+          </div>
+        </section>
+
+        <section class="grafico atividades-responsavel">
+          <div class="board">
+            <div class="titulo-grafico">
+              <img src="./icons/icon-grafico-analitico-focus2.png" alt="">
+              <h3 class="t-grafico">Atividades por Responsável</h3>
+            </div>
+            
+            <div class="sub-board">
+              <div class="sep-board"></div>
+              
+              <div class="cont-board">
+
+                <div class="graf-board grafico-atividade-responsavel">
+                  <!-- <div class="barra">
+                    <div class="sub-barra barra1">
+                      <div class="legenda-balao">100</div>
+                      <div class="tag-g"></div>
+                      <div class="tag-legenda">Nome 1</div>
+                    </div>
+                  </div> -->
+                </div>
+                <div class="tag-board">
+                  <div class="sub-tag-board escala-atividade-responsavel">
+                    <div class="escala-lateral6"></div>
+                    <div class="escala-lateral5"></div>
+                    <div class="escala-lateral4"></div>
+                    <div class="escala-lateral3"></div>
+                    <div class="escala-lateral2"></div>
+                    <div class="escala-lateral1"></div>
+                  </div>
+                </div>
+              </div>
+            </div>    
+          </div>
+        </section>
+      </div>
+
+      <div class="container-externo-grafico">
+        <section class="grafico atividades-sistema">
+          <div class="board">
+            <div class="titulo-grafico">
+              <img src="./icons/icon-grafico-analitico-focus5.png" alt="">
+              <h3 class="t-grafico">Atividades por Sistema</h3>
+              <button id="btn-grafico-completo-sistema" class="btn-grafico-completo" name="sistema">Gráfico completo</button>
+            </div>
+            
+            <div class="sub-board">
+              <div class="sep-board"></div>
+              
+              <div class="cont-board">
+  
+                <div class="graf-board grafico-atividade-sistema">
+                  <!-- <div class="barra">
+                    <div class="sub-barra barra1">
+                      <div class="legenda-balao">100</div>
+                      <div class="tag-g"></div>
+                      <div class="tag-legenda">Nome 1</div>
+                    </div>
+                  </div> -->
+                </div>
+                <div class="tag-board">
+                  <div class="sub-tag-board escala-atividade-sistema">
+                    <div class="escala-lateral6"></div>
+                    <div class="escala-lateral5"></div>
+                    <div class="escala-lateral4"></div>
+                    <div class="escala-lateral3"></div>
+                    <div class="escala-lateral2"></div>
+                    <div class="escala-lateral1"></div>
+                  </div>
+                </div>
+              </div>
+            </div>    
+          </div>
+        </section>
+      </div>
+
+      <div class="container-externo-grafico">
+        <section class="grafico atividades-supervisor">
+          <div class="board">
+            <div class="titulo-grafico">
+              <img src="./icons/icon-grafico-analitico-focus8.png" alt="">
+              <h3 class="t-grafico">Atividades por Supervisor</h3>
+              <button id="btn-grafico-completo-supervisor" class="btn-grafico-completo" name="supervisor">Gráfico completo</button>
+            </div>
+            
+            <div class="sub-board">
+              <div class="sep-board"></div>
+              
+              <div class="cont-board">
+  
+                <div class="graf-board grafico-atividade-supervisor">
+                  <!-- <div class="barra">
+                    <div class="sub-barra barra1">
+                      <div class="legenda-balao">100</div>
+                      <div class="tag-g"></div>
+                      <div class="tag-legenda">Nome 1</div>
+                    </div>
+                  </div> -->
+                </div>
+                <div class="tag-board">
+                  <div class="sub-tag-board escala-atividade-supervisor">
+                    <div class="escala-lateral6"></div>
+                    <div class="escala-lateral5"></div>
+                    <div class="escala-lateral4"></div>
+                    <div class="escala-lateral3"></div>
+                    <div class="escala-lateral2"></div>
+                    <div class="escala-lateral1"></div>
+                  </div>
+                </div>
+              </div>
+            </div>    
+          </div>
+        </section>
+      </div>
+    </main>
+  </div>
+
+  <!-- DIV GRAFICO COMPLETO -->
+  <div class="container-grafico-efeito-fundo tela-nivel2">
+    <div class="container-grafico-conteudo">
+      <div class="container-title-and-btn-close">
+        <h2>Teste teste teste</h2>
+        <img id="icon-fechar-grafico" src="./icons/icon-fechar.png" alt="">
+      </div>
+      
+      <div class="container-dados-graficos">
+        <!-- <div class="mini-barra">
+          <div class="title-mini-barra">Ovo</div>
+          <div class="barra-porcentagem barra1"></div>
+          <div class="valor-porcentagem">100</div>
+        </div> -->
+      </div>
+    </div>
+  </div>
+
+  <!-- DIV DETALHES TAREFAS OU ATIVIDADES TABELA -->
+  <div class="container-tabela-efeito-fundo tela-nivel3">
+    <div class="container-tabela-conteudo">
+      <div class="container-title-and-btn-close">
+        <h2 class="title-tabela">Teste teste teste</h2>
+        <img id="icon-fechar-tabela" class="fechar-nivel2" src="./icons/icon-fechar.png" alt="">
+      </div>
+
+      <div class="container-dados-tabela">
+        <table>
+          <thead>
+            <!-- <tr>
+              <th>QUANTIDADE</th>
+              <th>TAREFA</th>
+              <th>TITULO</th>
+              <th>RESPONSAVEL</th>
+              <th>SUPERVISOR</th>
+              <th>RECURSO</th>
+              <th>SITUACAO</th>
+            </tr> -->
+          </thead>
+
+          <tbody>
+            <!-- <tr>
+              <td>89</td>
+              <td>ABERTURA D***</td>
+              <td>839866</td>
+              <td>SEVLACNOG</td>
+              <td>SOPMAC OTANER</td>
+              <td>ENIAL SIAROM ED</td>
+              <td id="btn"><button>EM EXECUÇÃO</button></td>
+            </tr> -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- DIV TELA DE FILTRO -->
+  <div class="container-filtro-efeito-fundo">
+    <div class="container-filtro-conteudo">
+      <div class="container-filtro-and-btn-close">
+        <h2 class="title-filtro">Filtro</h2>
+        <img id="icon-fechar-filtro" src="./icons/icon-fechar.png" alt="">
+      </div>
+
+      <div class="container-dados-filtro">
+        <div class="container-ano">
+          <!-- <h2>Ano:</h2> -->
+          <!-- <button>2019</button>
+          <button>2020</button>
+          <button>2021</button>
+          <button>2022</button>
+          <button>2023</button> -->
+        </div>
+
+        <div class="container-mes">
+          <h2>Mês:</h2>
+          <div class="divide-seis">
+            <button class="btn-mes" numero="01">Janeiro</button>
+            <button class="btn-mes" numero="02">Fevereiro</button>
+            <button class="btn-mes" numero="03">Março</button>
+            <button class="btn-mes" numero="04">Abril</button>
+            <button class="btn-mes" numero="05">Maio</button>
+            <button class="btn-mes" numero="06">Junho</button>
+          </div>
+          
+          <div class="divide-seis">
+            <button class="btn-mes" numero="07">Julho</button>
+            <button class="btn-mes" numero="08">Agosto</button>
+            <button class="btn-mes" numero="09">Setembo</button>
+            <button class="btn-mes" numero="10">Outubro</button>
+            <button class="btn-mes" numero="11">Novembro</button>
+            <button class="btn-mes" numero="12">Dezembro</button>
+          </div>
+        </div>
+
+        <div class="situacao-tarefa">
+          <h2>Situação Tarefa:</h2>
+          <button class="btn-tarefa" name="EM EXECUÇÃO">Em Execução</button>
+          <button class="btn-tarefa" name="SUSPENSA">Suspensa</button>
+        </div>
+
+        <div class="situacao-atividade">
+          <h2>Situação Atividade:</h2>
+          <button class="btn-atividade" name="PARADO">Parado</button>
+          <button class="btn-atividade" name="EM EXECUÇÃO">Em Execução</button>
+        </div>
+      </div>
+
+      <div class="container-btn-aplicar-cancelar">
+        <button id="aplicar">Aplicar</button>
+        <button id="cancelar">Cancelar</button>
+        <button id="padrao">Padrão</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+</html>
