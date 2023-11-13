@@ -6,7 +6,7 @@ fetch('./json/dados-analise.json')
     // console.log(data.map(objeto => objeto.RESPONSAVEL));
     // console.log(data.filter(objeto => objeto.RESPONSAVEL === 'OHLAVRAC RASEC'));
     
-    const normalizandoNomesInverso = data.filter(objeto => objeto.DTA_FIM !== '');
+    const normalizandoNomesInverso = data;
 
     // console.log(new Set(data.map(objeto => objeto.SUPERVISOR)));
 
@@ -1721,7 +1721,7 @@ btnAplicar.addEventListener('click', function() {
     
     const data = sessionStorage.getItem('incode2099');
     const jsonData = JSON.parse(data);
-    const jsonDataFiltroPorAnoAndMesAndTarefaAndAtividade = jsonData.filter(objeto => objeto.DTA_FIM.match(`${btnAno}-${btnMes}`)).filter(objeto => objeto.SITUCAO_TAREFA === btnTarefa).filter(objeto => objeto.SITUACAO_ATIVIDADE === btnAtividade);
+    const jsonDataFiltroPorAnoAndMesAndTarefaAndAtividade = jsonData.filter(objeto => objeto.DTA_CADASTRAMENTO.match(`${btnAno}-${btnMes}`)).filter(objeto => objeto.SITUCAO_TAREFA === btnTarefa).filter(objeto => objeto.SITUACAO_ATIVIDADE === btnAtividade);
     aplicandoDadosSite(jsonDataFiltroPorAnoAndMesAndTarefaAndAtividade);
   } else if (btnAno !== '' && btnMes !== '' && btnTarefa !== '') {
     divGeralFiltroCompleto.style.display = 'none';
@@ -1782,7 +1782,7 @@ btnAplicar.addEventListener('click', function() {
 
     const data = sessionStorage.getItem('incode2099');
     const jsonData = JSON.parse(data);
-    const jsonDataFiltroPorAnoAndMesAndTarefa = jsonData.filter(objeto => objeto.DTA_FIM.match(`${btnAno}-${btnMes}`)).filter(objeto => objeto.SITUCAO_TAREFA === btnTarefa);
+    const jsonDataFiltroPorAnoAndMesAndTarefa = jsonData.filter(objeto => objeto.DTA_CADASTRAMENTO.match(`${btnAno}-${btnMes}`)).filter(objeto => objeto.SITUCAO_TAREFA === btnTarefa);
     aplicandoDadosSite(jsonDataFiltroPorAnoAndMesAndTarefa);
   } else if (btnAno !== '' && btnMes !== '') {
     divGeralFiltroCompleto.style.display = 'none';
@@ -1844,7 +1844,7 @@ btnAplicar.addEventListener('click', function() {
 
     const data = sessionStorage.getItem('incode2099');
     const jsonData = JSON.parse(data);
-    const jsonDataFiltroPorAnoAndMes = jsonData.filter(objeto => objeto.DTA_FIM.match(`${btnAno}-${btnMes}`));
+    const jsonDataFiltroPorAnoAndMes = jsonData.filter(objeto => objeto.DTA_CADASTRAMENTO.match(`${btnAno}-${btnMes}`));
     aplicandoDadosSite(jsonDataFiltroPorAnoAndMes);
   } else if (btnAno !== '') {
     divGeralFiltroCompleto.style.display = 'none';
@@ -1905,7 +1905,7 @@ btnAplicar.addEventListener('click', function() {
 
     const data = sessionStorage.getItem('incode2099');
     const jsonData = JSON.parse(data);
-    const jsonDataFiltroPorAno = jsonData.filter(objeto => objeto.DTA_FIM.match(btnAno));
+    const jsonDataFiltroPorAno = jsonData.filter(objeto => objeto.DTA_CADASTRAMENTO.match(btnAno));
     aplicandoDadosSite(jsonDataFiltroPorAno);
   }
   /* REAPLICANDO FILTRO POR SELEÇÃO TESTE */
